@@ -130,36 +130,11 @@ export default function Swipper() {
             watchSlidesProgress={true}
             className={`${styles.swiper} ${styles.thumbnails}`}
           >
-            <SwiperSlide className={styles.swiperSlide}>
-              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-            </SwiperSlide>
-            <SwiperSlide className={styles.swiperSlide}>
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </SwiperSlide>
-            <SwiperSlide className={styles.swiperSlide}>
-              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </SwiperSlide>
-            <SwiperSlide className={styles.swiperSlide}>
-              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            </SwiperSlide>
-            <SwiperSlide className={styles.swiperSlide}>
-              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-            </SwiperSlide>
-            <SwiperSlide className={styles.swiperSlide}>
-              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-            </SwiperSlide>
-            <SwiperSlide className={styles.swiperSlide}>
-              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-            </SwiperSlide>
-            <SwiperSlide className={styles.swiperSlide}>
-              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-            </SwiperSlide>
-            <SwiperSlide className={styles.swiperSlide}>
-              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-            </SwiperSlide>
-            <SwiperSlide className={styles.swiperSlide}>
-              <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-            </SwiperSlide>
+            {images.map((image, index) => (
+              <SwiperSlide key={index} className={styles.swiperSlide}>
+                <img src={image.src} />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </main>
