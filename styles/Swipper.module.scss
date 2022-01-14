@@ -1,0 +1,126 @@
+$captionHeight: 4.5rem;
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiperSlide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiperSlide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiperSlide {
+  background-size: cover;
+  background-position: center;
+}
+
+.photoFullSize {
+  height: 36.8rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  [class~=swiper-button-prev],
+  [class~=swiper-button-next] {
+    height: 48px;
+    width: 48px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+      background: url(/arrow-left.svg) no-repeat center;
+      background-size: 24px;
+      height: inherit;
+      width: inherit;
+    }
+  }
+
+  [class~=swiper-button-prev]::after {
+    background-image: url('/arrow-left.svg');
+  }
+
+  [class~=swiper-button-next]::after {
+    background-image: url('/arrow-right.svg');
+  }
+  
+
+  .swiperSlide {
+    background-color: #F7F9FB;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    flex-direction: column;
+
+    img {
+      height: calc(100% - #{$captionHeight});
+    }
+
+    .caption {
+      text-align: left;
+      height: $captionHeight;
+      padding: 1rem;
+      width: 100%;
+      p {
+        margin: 0;
+      }
+      p:first-child {
+        font-size: 16px;
+      }
+      p:last-child {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.gallery {
+  width: 46.5rem;
+}
+
+.thumbnails {
+  box-sizing: border-box;
+  padding: 10px 0;
+
+  .swiperSlide {
+    width: 3.65rem;
+    height: 3.65rem;
+    border-radius: 0.45rem;
+    overflow: hidden;
+  }
+}
+
+.swiperSlide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
