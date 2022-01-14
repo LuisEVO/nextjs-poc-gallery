@@ -12,6 +12,7 @@ import styles from "../styles/Swipper.module.scss";
 
 // import Swiper core and required modules
 import SwiperCore, { FreeMode, Navigation, Thumbs } from "swiper";
+import Image from 'next/image';
 
 // install Swiper modules
 SwiperCore.use([FreeMode, Navigation, Thumbs]);
@@ -89,7 +90,7 @@ const images = [
   },
 ];
 
-export default function Swipper() {
+export default function SwipperGallery() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
@@ -114,7 +115,7 @@ export default function Swipper() {
           >
             {images.map((image, index) => (
               <SwiperSlide key={index} className={styles.swiperSlide}>
-                <img src={image.src} />
+                <Image src={image.src} alt={image.caption} width={744} height={492}/>
                 <div className={styles.caption}>
                   <p>{image.caption.p1}</p>
                   <p>{image.caption.p2}</p>
@@ -132,7 +133,7 @@ export default function Swipper() {
           >
             {images.map((image, index) => (
               <SwiperSlide key={index} className={styles.swiperSlide}>
-                <img src={image.src} />
+                <Image src={image.src} alt={image.caption} width={58} height={58}/>
               </SwiperSlide>
             ))}
           </Swiper>
