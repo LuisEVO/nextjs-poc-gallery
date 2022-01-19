@@ -1,5 +1,6 @@
 import React, { useCallback, useRef, useState } from 'react';
 
+import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
 
